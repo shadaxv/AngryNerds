@@ -96,7 +96,7 @@ html {
   background: rgba(255, 255, 255, 255);
   padding-bottom: 10rem;
 
-  & .article-container {
+  .article-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -150,7 +150,7 @@ html {
   padding: 6.875rem 23rem;
   text-align: center;
 
-  & .section__heading {
+  .section__heading {
     margin: 0 auto;
     color: rgba(164, 236, 213, 255);
     text-align: left;
@@ -183,7 +183,7 @@ html {
     margin: 0 0 3.375rem;
   }
 
-  & .article-container {
+  .article-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -220,13 +220,112 @@ html {
   }
 }
 
-
 .fifth-section {
   background: rgba(218, 218, 218, 255);
   padding: 5rem 23rem;
 
   .section__heading {
-    margin: 0 auto;
-text-align: left;
+    margin: 0 auto 5rem;
+    text-align: left;
+  }
+
+  .span-container {
+    font-size: 1.125rem;
+
+    &__name-span {
+      color: rgba(36, 36, 34, 255);
+    }
+
+    &__sign-span {
+      color: rgba(255, 255, 255, 255);
+      width: 2.5rem;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  .article-container {
+    margin: 5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    &__article {
+      -ms-flex-preferred-size: calc(25% - 1.36rem);
+      flex-basis: calc(25% - 1.36rem);
+      background: rgba(255, 255, 255, 255);
+      padding: 0 1.1875rem 2rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0.78125rem 0;
+      border-top: 0.9375rem solid rgba(164, 236, 213, 255);
+      -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.08), 0 3px 9px rgba(0,0,0,0.11);
+      box-shadow: 0 3px 9px rgba(0,0,0,0.08), 0 3px 9px rgba(0,0,0,0.11);
+
+      .heading-container {
+        height: 5rem;
+        margin: 3rem 0;
+      }
+
+      .article__heading {
+        color: rgba(36, 36, 34, 255);
+        font-size: 1.5625rem;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      .article__paragraph {
+        font-size: 1.125rem;
+        color: rgba(36, 36, 34, 255);
+        margin-bottom: 3.5rem;
+      }
+
+      .article__anchor {
+        font-size: 1.125rem;
+        color: rgba(36, 36, 34, 255);
+        font-weight: 800;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.sixth-section {
+  background: rgba(255, 255, 255, 255);
+  padding: 5rem 23rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  .section__heading {
+    margin: 0 auto 5rem;
+    text-align: left;
+  }
+
+  .items-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .section__paragraph {
+      font-size: 2.1875rem;
+      font-weight: 800;
+      display: inline-block;
+    }
+
+    .icon {
+      height: auto;
+    }
   }
 }
