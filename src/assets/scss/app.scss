@@ -43,7 +43,7 @@ html {
   &__anchor {
     color: rgba(0, 0, 0, 255);
     text-decoration: none;
-    font-size: 1.1625rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -55,14 +55,14 @@ html {
 
   &__heading {
     color: rgba(164, 236, 213, 255);
-    font-size: 5rem;
+    font-size: 3.75rem;
     margin: 2.5rem 0.625rem;
     font-weight: 800;
   }
 
   &__paragraph {
     color: rgba(255, 255, 255, 255);
-    font-size: 3.333rem;
+    font-size: 2.5rem;
     margin: 3.333rem 0.875rem;
     font-weight: 800;
   }
@@ -70,20 +70,33 @@ html {
   &__paragraph--with-bg {
     margin-top: 16.625rem;
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     color: rgba(255, 255, 255, 255);
 
     span {
       background: rgba(159, 208, 192, 255);
-      padding: 0 0.75rem;
+      padding: 0.2rem 0.75rem;
+      line-height: 1.5rem;
     }
+  }
+}
+
+.section {
+  &__heading {
+    color: rgba(36, 36, 34, 255);
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 4.6875rem auto;
+    line-height: 1;
+    font-weight: 800;
   }
 }
 
 .first-section {
   background: rgba(255, 255, 255, 255);
+  padding-bottom: 10rem;
 
-  .article-container {
+  & .article-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -93,10 +106,11 @@ html {
 
     &__article {
       width: 23.75rem;
-      padding: 3.75rem;
+      padding: 1.25rem 3.75rem 0;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       text-align: center;
+      position: relative;
 
       &::after {
         content: '';
@@ -104,21 +118,115 @@ html {
         height: 11.375rem;
         background: rgba(0, 0, 0, 255);
         display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
       }
 
       &:last-child:after {
         display: none;
       }
+
+      .article__heading {
+        margin: 2rem auto;
+        font-size: 1.5625rem;
+      }
+
+      .article__paragraph {
+        font-size: 1.125rem;
+      }
+    }
+
+    .image-container {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto;
     }
   }
 }
 
-.section {
-  &__heading {
+.second-section {
+  background: rgba(36, 36, 34, 255);
+  padding: 6.875rem 23rem;
+  text-align: center;
+
+  & .section__heading {
+    margin: 0 auto;
+    color: rgba(164, 236, 213, 255);
+    text-align: left;
+  }
+}
+
+.third-section {
+  padding: 10rem 23rem;
+  text-align: center;
+
+  .section__heading {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .section__list {
+    text-align: left;
+    font-size: 1.125rem;
     color: rgba(36, 36, 34, 255);
-    font-size: 3.333rem;
-    text-align: center;
-    margin: 4.6875rem auto;
-    line-height: 1;
+    padding-left: 1.125rem;
+    margin-top: 5rem;
+  }
+}
+
+.fourth-section {
+  background: rgba(164, 236, 213, 255);
+  padding: 4.6875rem 0;
+
+  .section__heading {
+    margin: 0 0 3.375rem;
+  }
+
+  & .article-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &__article {
+      padding: 0 5rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      text-align: center;
+      position: relative;
+
+      .article__heading {
+        margin: 2rem auto;
+        font-size: 1.5625rem;
+      }
+
+      .article__paragraph {
+        font-size: 1.125rem;
+      }
+    }
+
+    .image-container {
+      width: 106px;
+      height: 106px;
+      margin: 0 auto;
+    }
+
+    .arrow-container {
+      margin-top: 143px;
+    }
+  }
+}
+
+
+.fifth-section {
+  background: rgba(218, 218, 218, 255);
+  padding: 5rem 23rem;
+
+  .section__heading {
+    margin: 0 auto;
+text-align: left;
   }
 }
