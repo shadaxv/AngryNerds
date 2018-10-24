@@ -8,41 +8,47 @@
 </head>
 
 <body>
-  <nav class="">
-    <h1><img alt="LOGO" src="./assets/media/logo@1X.png"></h1>
-    <ul>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Career</a></li>
-      <li><a href="#">Contact</a></li>
+  <nav class="navigation">
+    <h1 class="navigation__header"><img alt="LOGO" src="./assets/media/logo@1X.png"></h1>
+    <ul class="navigation__list">
+      <li class="navigation__item"><a class="navigation__anchor" href="#">Services</a></li>
+      <li class="navigation__item"><a class="navigation__anchor" href="#">Projects</a></li>
+      <li class="navigation__item"><a class="navigation__anchor" href="#">About Us</a></li>
+      <li class="navigation__item"><a class="navigation__anchor" href="#">Blog</a></li>
+      <li class="navigation__item"><a class="navigation__anchor" href="#">Career</a></li>
+      <li class="navigation__item"><a class="navigation__anchor" href="#">Contact</a></li>
     </ul>
   </nav>
 
-  <header>
-    <h2>Career</h2>
-    <p>Looking for programming challenges?<br>Join us!</p>
-    <p>The right mix of people on board is the key to success.<br>That’s why the recruitment process is very important to us.</p>
+  <header class="header">
+    <h2 class="header__heading">Career</h2>
+    <p class="header__paragraph">Looking for programming challenges?<br>Join us!</p>
+    <p class="header__paragraph--with-bg">
+      <span>The right mix of people on board is the key to success.</span>
+      <br>
+      <span>That’s why the recruitment process is very important to us.</span>
+    </p>
   </header>
 
-  <section>
-    <h2>Our key company values</h2>
-    <article class="">
-      <img src="" alt="">
-      <h3>Focus</h3>
-      <p>we are precise, focus on the client, on the project, on achieving a common goal</p>
-    </article>
-    <article class="">
-      <img src="" alt="">
-      <h3>Openness</h3>
-      <p>we listen,<br>we are ready for challenges,<br>we are transparent and open<br>to criticism that leads<br>to improvement</p>
-    </article>
-    <article class="">
-      <img src="" alt="">
-      <h3>Commitment</h3>
-      <p>everything we do,<br>we do 100%</p>
-    </article>
+  <section class="first-section">
+    <h2 class="section__heading">Our key company values</h2>
+    <div class="article-container">
+      <article class="article-container__article">
+        <img src="./assets/media/-e-IK_focus@1X.png" alt="">
+        <h3>Focus</h3>
+        <p>we are precise, focus on the client, on the project, on achieving a common goal</p>
+      </article>
+      <article class="article-container__article">
+        <img src="./assets/media/-e-IK_openess@1X.png" alt="">
+        <h3>Openness</h3>
+        <p>we listen,<br>we are ready for challenges,<br>we are transparent and open<br>to criticism that leads<br>to improvement</p>
+      </article>
+      <article class="article-container__article">
+        <img src="./assets/media/-e-IK_commitment@1X.png" alt="">
+        <h3>Commitment</h3>
+        <p>everything we do,<br>we do 100%</p>
+      </article>
+    </div>
   </section>
 
   <section>

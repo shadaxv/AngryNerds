@@ -1,0 +1,124 @@
+@import 'normalize';
+@include normalize();
+
+body,
+html {
+  font-family: sans-serif;
+}
+
+.navigation {
+  background: rgba(255, 255, 255, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.875rem 25rem;
+
+  &__header {
+    font-size: 1.625rem;
+    line-height: 1;
+  }
+
+  &__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0 20px;
+  }
+
+  &__anchor {
+    color: rgba(0, 0, 0, 255);
+    text-decoration: none;
+    font-size: 1.1625rem;
+  }
+}
+
+.header {
+  background: rgb(154,154,154);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(154,154,154,1)), to(rgba(78,78,78,1)));
+  background: linear-gradient(0deg, rgba(154,154,154,1) 0%, rgba(78,78,78,1) 100%);
+  padding: 2.5rem 23rem;
+
+  &__heading {
+    color: rgba(164, 236, 213, 255);
+    font-size: 5rem;
+    margin: 2.5rem 0.625rem;
+    font-weight: 800;
+  }
+
+  &__paragraph {
+    color: rgba(255, 255, 255, 255);
+    font-size: 3.333rem;
+    margin: 3.333rem 0.875rem;
+    font-weight: 800;
+  }
+
+  &__paragraph--with-bg {
+    margin-top: 16.625rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 255);
+
+    span {
+      background: rgba(159, 208, 192, 255);
+      padding: 0 0.75rem;
+    }
+  }
+}
+
+.first-section {
+  background: rgba(255, 255, 255, 255);
+
+  .article-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &__article {
+      width: 23.75rem;
+      padding: 3.75rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      text-align: center;
+
+      &::after {
+        content: '';
+        width: 1px;
+        height: 11.375rem;
+        background: rgba(0, 0, 0, 255);
+        display: block;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.section {
+  &__heading {
+    color: rgba(36, 36, 34, 255);
+    font-size: 3.333rem;
+    text-align: center;
+    margin: 4.6875rem auto;
+    line-height: 1;
+  }
+}
