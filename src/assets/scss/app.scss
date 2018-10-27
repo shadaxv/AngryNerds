@@ -1,5 +1,7 @@
 @import 'normalize';
 @include normalize();
+@import "~foundation-sites/scss/foundation";
+@include foundation-everything();
 
 body,
 html {
