@@ -6,7 +6,6 @@ html {
   font-family: sans-serif;
 }
 
-
 .navigation {
   background: rgba(255, 255, 255, 255);
   padding: 0 1.875rem;
@@ -19,6 +18,7 @@ html {
   @include breakpoint(xxlarge) {
     padding: 0 20%;
   }
+
   &__header {
     font-size: 1.625rem;
     line-height: 1;
@@ -73,8 +73,8 @@ html {
 
   &__button::after {
     background: rgba(0, 0, 0, 255);
-        -webkit-box-shadow: 0 7px 0 #000, 0 14px 0 #000;
-                box-shadow: 0 7px 0 #000, 0 14px 0 #000;
+    -webkit-box-shadow: 0 7px 0 #000, 0 14px 0 #000;
+    box-shadow: 0 7px 0 #000, 0 14px 0 #000;
   }
 }
 
@@ -82,7 +82,16 @@ html {
   background: rgb(154,154,154);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(154,154,154,1)), to(rgba(78,78,78,1)));
   background: linear-gradient(0deg, rgba(154,154,154,1) 0%, rgba(78,78,78,1) 100%);
-  padding: 2.5rem 23rem;
+  padding: 2.5rem 1.875rem;
+  @include breakpoint(large) {
+    padding: 2.5rem 5%;
+  }
+  @include breakpoint(xlarge) {
+    padding: 2.5rem 10%;
+  }
+  @include breakpoint(xxlarge) {
+    padding: 2.5rem 20%;
+  }
 
   &__heading {
     color: rgba(164, 236, 213, 255);
@@ -96,6 +105,7 @@ html {
     font-size: 2.5rem;
     margin: 3.333rem 0.875rem;
     font-weight: 800;
+    word-break: break-word;
   }
 
   &__paragraph--with-bg {
@@ -106,13 +116,37 @@ html {
 
     span {
       background: rgba(159, 208, 192, 255);
-      padding: 0.2rem 0.75rem;
+      padding: 0.25rem 0.75rem 0.25rem 0;
       line-height: 1.5rem;
+          white-space: pre-wrap;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -0.75rem;
+            bottom: 0;
+            width: 0.75rem;
+            background: rgba(159, 208, 192, 255);
+          }
     }
   }
 }
 
 .section {
+  margin: 0;
+  padding: 1px 1.875rem 4.6875rem;
+  @include breakpoint(large) {
+    padding: 1px 5% 4.6875rem;
+  }
+  @include breakpoint(xlarge) {
+    padding: 1px 10% 4.6875rem;
+  }
+  @include breakpoint(xxlarge) {
+    padding: 1px 20% 4.6875rem;
+  }
+
   &__heading {
     color: rgba(36, 36, 34, 255);
     font-size: 2.5rem;
@@ -128,30 +162,23 @@ html {
   padding-bottom: 10rem;
 
   .article-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
     &__article {
-      width: 23.75rem;
       padding: 1.25rem 3.75rem 0;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       text-align: center;
       position: relative;
-
-      &::after {
-        content: '';
-        width: 1px;
-        height: 11.375rem;
-        background: rgba(0, 0, 0, 255);
-        display: block;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+      @include breakpoint(large) {
+        &::after {
+          content: '';
+          width: 1px;
+          height: 11.375rem;
+          background: rgba(0, 0, 0, 255);
+          display: block;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       }
 
       &:last-child:after {
@@ -178,22 +205,19 @@ html {
 
 .second-section {
   background: rgba(36, 36, 34, 255);
-  padding: 6.875rem 23rem;
   text-align: center;
 
   .section__heading {
-    margin: 0 auto;
     color: rgba(164, 236, 213, 255);
     text-align: left;
+    margin-bottom: 0;
   }
 }
 
 .third-section {
-  padding: 10rem 23rem;
   text-align: center;
 
   .section__heading {
-    margin: 0 auto;
     text-align: left;
   }
 
@@ -208,11 +232,8 @@ html {
 
 .fourth-section {
   background: rgba(164, 236, 213, 255);
-  padding: 4.6875rem 0;
 
-  .section__heading {
-    margin: 0 0 3.375rem;
-  }
+  .section__heading {}
 
   .article-container {
     display: -webkit-box;
@@ -223,7 +244,6 @@ html {
     justify-content: center;
 
     &__article {
-      padding: 0 5rem;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       text-align: center;
@@ -246,17 +266,36 @@ html {
     }
 
     .arrow-container {
-      margin-top: 143px;
+      margin: 1rem 0 2rem;
+      display: inline-block;
+      text-align: center;
+
+      img {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+      @include breakpoint(large) {
+        margin: 9rem 0 0;
+
+        img {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+      }
     }
   }
 }
 
 .fifth-section {
   background: rgba(218, 218, 218, 255);
-  padding: 5rem 23rem;
+  @include breakpoint(xxlarge) {
+    padding: 1px 10%;
+  }
+  @include breakpoint(xxxlarge) {
+    padding: 1px 20%;
+  }
 
   .section__heading {
-    margin: 0 auto 5rem;
     text-align: left;
   }
 
@@ -276,24 +315,13 @@ html {
   }
 
   .article-container {
-    margin: 5rem 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    margin-top: 5rem;
 
     &__article {
-      -ms-flex-preferred-size: calc(25% - 1.36rem);
-      flex-basis: calc(25% - 1.36rem);
       background: rgba(255, 255, 255, 255);
       padding: 0 1.1875rem 2rem;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      margin: 0.78125rem 0;
       border-top: 0.9375rem solid rgba(164, 236, 213, 255);
       -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.08), 0 3px 9px rgba(0,0,0,0.11);
       box-shadow: 0 3px 9px rgba(0,0,0,0.08), 0 3px 9px rgba(0,0,0,0.11);
@@ -328,13 +356,11 @@ html {
 
 .sixth-section {
   background: rgba(255, 255, 255, 255);
-  padding: 5rem 23rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 
   .section__heading {
-    margin: 0 auto 5rem;
     text-align: left;
   }
 
